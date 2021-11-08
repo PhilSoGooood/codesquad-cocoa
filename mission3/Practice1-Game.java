@@ -68,6 +68,7 @@ class Gamble {
 		// 게임을 클리어하면 다음 문구 출력
 		System.out.println("Clear!");
 		System.out.println("최종 " + name +"의 소지금은 " + (int)player.money + "입니다.");
+		scanner.close();
 	}
 }
 
