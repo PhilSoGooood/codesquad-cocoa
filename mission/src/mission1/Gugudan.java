@@ -1,5 +1,6 @@
+package mission1;
 import java.util.Scanner;
-public class gugudan {
+public class Gugudan {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("시작단을 입력해주세요: ");

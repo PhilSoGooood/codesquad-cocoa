@@ -1,35 +1,4 @@
-import java.util.Random;
-import java.util.Scanner;
-
-// Player 클래스 생성 및 홀짝 입력 메소드 기능
-class Player {
-	public double money = 100;
-	public String InputName() {
-
-		System.out.print("이름을 입력해주세요: ");
-		String name = Game.scanner.next();
-		return name;
-	}
-	public String PickNumber() {
-		System.out.print("홀 또는 짝을 입력해주세요: ");
-		String pick = Game.scanner.next();
-		return pick;
-	}
-}
-
-// 라이벌 생성 및 랜덤 숫자 생성 기능 구현
-class Rival {
-	// 라이벌 생성자(소지금 * pow(1.2, stage))
-	double money;
-	public Rival(double m) {
-		money = m;
-	}
-	public int RandomNumber() {
-		Random random = new Random();
-		int picknum = random.nextInt(20)+1;
-		return picknum;
-	}
-}
+package mission3.oddevengame;
 
 // 게임 클래스 및 게임오버시까지 최대 8번 배팅
 class Gamble {
@@ -43,10 +12,10 @@ class Gamble {
 			System.out.println("Stage " + (i+1));
 			Rival rival = new Rival(player.money * Math.pow(1.2, i+1));
 			while((player.money > 0)&&(rival.money > 0)){
-				double maxbetting = Math.min(player.money, rival.money);
-				System.out.print("배팅금액을 입력해주세요(배팅한도: "+ (int)maxbetting+"): ");
+				double maxBetting = Math.min(player.money, rival.money);
+				System.out.print("배팅금액을 입력해주세요(배팅한도: "+ (int)maxBetting+"): ");
 				double bettingMoney = Game.scanner.nextDouble();
-				while(bettingMoney > maxbetting){
+				while(bettingMoney > maxBetting){
 					System.out.println("배팅한도를 초과하였습니다.");
 					System.out.print("배팅금액을 다시 입력해주세요: ");
 					bettingMoney = Game.scanner.nextDouble();
@@ -86,14 +55,3 @@ class Gamble {
 		System.out.println("최종 " + name +"의 소지금은 " + (int)player.money + "입니다.");
 	}
 }
-
-public class Game {
-	public static Scanner scanner = new Scanner(System.in);
-	public static void main(String[] args) {
-		Gamble gamble = new Gamble();
-		gamble.betting();
-		scanner.close();
-	}
-
-}
-
