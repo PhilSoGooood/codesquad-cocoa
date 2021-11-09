@@ -6,6 +6,7 @@ public class Game {
 	public static void main(String[] args) {
 		Gamble gamble = new Gamble();
 		gamble.betting();
+		scanner.close();
 	}
 }
 
