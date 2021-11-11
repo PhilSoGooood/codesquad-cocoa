@@ -1,6 +1,6 @@
 package mission3.oddevengame;
 public class Player {
-	public double money = 100;
+	public int money = 100;
 	public String InputName() {
 
 		System.out.print("이름을 입력해주세요: ");

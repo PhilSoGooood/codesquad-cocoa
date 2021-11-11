@@ -4,8 +4,8 @@ import java.util.Random;
 // 라이벌 생성 및 랜덤 숫자 생성 기능 구현
 class Rival {
 	// 라이벌 생성자(소지금 * pow(1.2, stage))
-	double money; int pickNum;
-	public Rival(double m) {
+	int money; int pickNum;
+	public Rival(int m) {
 		money = m;
 	}
 	public int RandomNumber() {
