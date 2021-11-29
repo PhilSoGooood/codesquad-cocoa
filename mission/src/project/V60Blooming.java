@@ -3,10 +3,10 @@ package project;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class LastPour {
-	public void lastPour(){
+public class V60Blooming {
+	public void degassing() {
 		Timer timer = new Timer();
-		TimerTask timerTask = new TimerTask() {
+		TimerTask degassing = new TimerTask() {
 			int count = 50;
 			@Override
 			public void run() {
@@ -17,12 +17,12 @@ public class LastPour {
 				else {
 					timer.cancel();
 					System.out.println("시간 종료.");
-					Stir stirring = new Stir();
-					stirring.stir();
+					V60LastPour lastpour = new V60LastPour();
+					lastpour.lastPour();
 				}
 			}
 		};
-		System.out.println("남은 물을 전부 부어주세요.");
-		timer.schedule(timerTask, 1000, 1000);
+		System.out.println("스푼으로 원두를 한번 저어준 후 50초간 뜸을 들입니다. ");
+		timer.schedule(degassing, 1000, 1000);
 	}
 }

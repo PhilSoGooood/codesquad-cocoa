@@ -11,7 +11,7 @@ public class V60Ready{
 		bean = scanner.nextInt();
 		System.out.printf("뜨거운 물 %d ml를 준비해주세요.", (bean * 17) + feedback);
 
-		FirstPour firstpour = new FirstPour();
+		V60FirstPour firstpour = new V60FirstPour();
 		firstpour.firstPour();
 	}
 }

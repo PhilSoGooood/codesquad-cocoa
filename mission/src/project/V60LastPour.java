@@ -1,12 +1,13 @@
 package project;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
-class FirstPour {
-	public void firstPour(){
+public class V60LastPour {
+	public void lastPour(){
 		Timer timer = new Timer();
 		TimerTask timerTask = new TimerTask() {
-			int count = 10;
+			int count = 50;
 			@Override
 			public void run() {
 				if(count > 0){
@@ -16,12 +17,12 @@ class FirstPour {
 				else {
 					timer.cancel();
 					System.out.println("시간 종료.");
-					Blooming blooming = new Blooming();
-					blooming.degassing();
+					V60Stir stirring = new V60Stir();
+					stirring.stir();
 				}
 			}
 		};
-		System.out.println("물 66ml를 평평하게 부어주세요.");
+		System.out.println("남은 물을 50초동안 전부 부어주세요.");
 		timer.schedule(timerTask, 1000, 1000);
 	}
 }
