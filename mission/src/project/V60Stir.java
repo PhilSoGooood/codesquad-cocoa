@@ -2,9 +2,11 @@ package project;
 
 import java.util.Timer;
 import java.util.TimerTask;
+import java.awt.Toolkit;
 
 public class V60Stir {
 	public void stir(){
+		Toolkit toolkit = Toolkit.getDefaultToolkit();
 		Timer timer = new Timer();
 		TimerTask timerTask = new TimerTask() {
 			int count = 30;
@@ -16,6 +18,7 @@ public class V60Stir {
 				}
 				else {
 					timer.cancel();
+					toolkit.beep();
 					System.out.println("시간 종료.");
 					V60Finish finish = new V60Finish();
 					finish.spin();

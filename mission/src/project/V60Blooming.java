@@ -2,9 +2,12 @@ package project;
 
 import java.util.Timer;
 import java.util.TimerTask;
+import java.awt.Toolkit;
+
 
 public class V60Blooming {
 	public void degassing() {
+		Toolkit toolkit = Toolkit.getDefaultToolkit();
 		Timer timer = new Timer();
 		TimerTask degassing = new TimerTask() {
 			int count = 50;
@@ -16,6 +19,7 @@ public class V60Blooming {
 				}
 				else {
 					timer.cancel();
+					toolkit.beep();
 					System.out.println("시간 종료.");
 					V60LastPour lastpour = new V60LastPour();
 					lastpour.lastPour();

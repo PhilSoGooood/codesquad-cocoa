@@ -2,9 +2,11 @@ package project;
 
 import java.util.Timer;
 import java.util.TimerTask;
+import java.awt.Toolkit;
 
 public class V60LastPour {
 	public void lastPour(){
+		Toolkit toolkit = Toolkit.getDefaultToolkit();
 		Timer timer = new Timer();
 		TimerTask timerTask = new TimerTask() {
 			int count = 50;
@@ -16,6 +18,7 @@ public class V60LastPour {
 				}
 				else {
 					timer.cancel();
+					toolkit.beep();
 					System.out.println("시간 종료.");
 					V60Stir stirring = new V60Stir();
 					stirring.stir();

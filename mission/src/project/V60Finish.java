@@ -1,11 +1,12 @@
 package project;
 
-import java.util.Locale;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.awt.Toolkit;
 
 public class V60Finish {
 	public void spin() {
+		Toolkit toolkit = Toolkit.getDefaultToolkit();
 		Timer timer = new Timer();
 		TimerTask timerTask = new TimerTask() {
 			int count = 10;
@@ -17,6 +18,7 @@ public class V60Finish {
 					count--;
 				} else {
 					timer.cancel();
+					toolkit.beep();
 					System.out.println("시간 종료.");
 					V60Feedback v60Feedback = new V60Feedback();
 					v60Feedback.feedback();
