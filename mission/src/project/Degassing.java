@@ -1,13 +1,13 @@
 package project;
-import java.util.Scanner;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
-class V60Start {
-	public void brewing(){
+public class Degassing {
+	public void degassing() {
 		Timer timer = new Timer();
-		TimerTask timerTask = new TimerTask() {
-			int count = 10;
+		TimerTask degassing = new TimerTask() {
+			int count = 50;
 			@Override
 			public void run() {
 				if(count > 0){
@@ -20,7 +20,7 @@ class V60Start {
 				}
 			}
 		};
-		System.out.println("물 66ml를 평평하게 부어주세요.");
-		timer.schedule(timerTask, 1000, 1000);
+		System.out.println("스푼으로 원두를 한번 저어준 후 50초간 뜸을 들입니다. ");
+		timer.schedule(degassing, 1000, 1000);
 	}
 }

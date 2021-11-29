@@ -7,8 +7,8 @@ public class CoffeeTimer {
 	// 	ct.selectTool();
 	//	원두량 입력 및 물 추출량 계산
 	//	디개싱 시간
-		V60Start start = new V60Start();
-		start.brewing();
+		FirstPour start = new FirstPour();
+		start.firstPour();
 	//	본격 추출 시간 카운트
 	//	피드백
 	}
