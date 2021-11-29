@@ -1,7 +1,7 @@
 package mission3.oddevengame;
 
 // 게임 클래스 및 게임오버시까지 최대 8번 배팅
-class Gamble {
+class  Gamble {
 	Player player = new Player();
 	String name = player.InputName();
 	String rivalNum; String playerNum;
