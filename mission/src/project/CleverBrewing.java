@@ -21,6 +21,8 @@ public class CleverBrewing {
 					toolkit.beep();
 					System.out.println("시간 종료.");
 					System.out.println();
+					CleverFeedback cleverFeedback = new CleverFeedback();
+					cleverFeedback.feedback();
 				}
 			}
 		};
