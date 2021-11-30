@@ -19,9 +19,6 @@ public class CleverReady {
 			System.out.printf("뜨거운 물 %d ml를 준비해주세요.%n", (bean * 16) + feedback);
 		}
 
-		System.out.println("준비가 완료되었다면 엔터키를 눌러주세요.");
-		String enter = scanner.nextLine();
-
 		CleverPour cleverPour = new CleverPour();
 		cleverPour.pour();
 	}

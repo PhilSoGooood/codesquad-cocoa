@@ -36,6 +36,7 @@ class CoffeeTool {
 		}
 		if (toolNum == 4) {
 			scanner.close();
+			System.out.println("다음에 또 만나요~! ");
 			return;
 		}
 	}
