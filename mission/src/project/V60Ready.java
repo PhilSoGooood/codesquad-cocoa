@@ -9,7 +9,15 @@ public class V60Ready{
 		System.out.println("Scott Rao 추천 레시피: 원두 22g, 물 360ml");
 		System.out.print("원두량을 입력해주세요.>>> ");
 		bean = scanner.nextInt();
-		System.out.printf("뜨거운 물 %d ml를 준비해주세요.%n", (bean * 17) + feedback);
+		if(bean == 22){
+			System.out.printf("뜨거운 물 %d ml를 준비해주세요.%n", 360 + feedback);
+		}
+		if(!(bean == 22)){
+			System.out.printf("뜨거운 물 %d ml를 준비해주세요.%n", (bean * 17) + feedback);
+		}
+
+		System.out.println("준비가 완료되었다면 엔터키를 눌러주세요.");
+		String enter = scanner.nextLine();
 
 		V60FirstPour firstpour = new V60FirstPour();
 		firstpour.firstPour();
