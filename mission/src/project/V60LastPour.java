@@ -20,6 +20,7 @@ public class V60LastPour {
 					timer.cancel();
 					toolkit.beep();
 					System.out.println("시간 종료.");
+					System.out.println();
 					V60Stir stirring = new V60Stir();
 					stirring.stir();
 				}

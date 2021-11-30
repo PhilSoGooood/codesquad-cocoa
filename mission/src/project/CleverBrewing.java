@@ -1,15 +1,15 @@
 package project;
 
+import java.awt.Toolkit;
 import java.util.Timer;
 import java.util.TimerTask;
-import java.awt.Toolkit;
 
-public class V60Finish {
-	public void spin() {
+public class CleverBrewing {
+	public void brewing() {
 		Toolkit toolkit = Toolkit.getDefaultToolkit();
 		Timer timer = new Timer();
 		TimerTask timerTask = new TimerTask() {
-			int count = 10;
+			int count = 60;
 
 			@Override
 			public void run() {
@@ -21,12 +21,10 @@ public class V60Finish {
 					toolkit.beep();
 					System.out.println("시간 종료.");
 					System.out.println();
-					V60Feedback v60Feedback = new V60Feedback();
-					v60Feedback.feedback();
 				}
 			}
 		};
-		System.out.println("드리퍼를 잡고 원을 그리며 가볍게 흔들어 주세요.");
+		System.out.println("클레버를 서버 위에 올리고 1분간 추출합니다. ");
 		timer.schedule(timerTask, 1000, 1000);
 	}
 }

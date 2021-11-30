@@ -20,6 +20,7 @@ public class V60Stir {
 					timer.cancel();
 					toolkit.beep();
 					System.out.println("시간 종료.");
+					System.out.println();
 					V60Finish finish = new V60Finish();
 					finish.spin();
 				}

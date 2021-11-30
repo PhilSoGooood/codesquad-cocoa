@@ -19,6 +19,7 @@ class V60FirstPour {
 					timer.cancel();
 					toolkit.beep();
 					System.out.println("시간 종료.");
+					System.out.println();
 					V60Blooming blooming = new V60Blooming();
 					blooming.degassing();
 				}

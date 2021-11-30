@@ -20,6 +20,9 @@ public class CompressoFinish {
 					timer.cancel();
 					toolkit.beep();
 					System.out.println("시간 종료.");
+					System.out.println();
+					CompressoFeedback compressoFeedback = new CompressoFeedback();
+					compressoFeedback.feedback();
 				}
 			}
 		};
