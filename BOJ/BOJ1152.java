@@ -1,14 +1,16 @@
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class Main {
-	public static void main(String[] args) {
-		Scanner scanner = new Scanner(System.in);
-		String chrs = scanner.nextLine().strip();
-		if (chrs.length() == 0) {
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String input[] = br.readLine().trim().split(" ");
+		if(input[0].equals("")){
 			System.out.println(0);
-		} else {
-			String[] splited = chrs.split("\\s+");
-			System.out.println(splited.length);
-		}
+		}else{System.out.println(input.length);}
+		br.close();
 	}
 }
+
+
